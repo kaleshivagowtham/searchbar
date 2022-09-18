@@ -1,0 +1,60 @@
+.wholeCont{
+  position: relative;
+  width: 50%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+}
+
+.srchInput{
+  width: 80%;
+  height: 5vh;
+  text-indent: 1vh;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 3vh;
+}
+
+.srchIconCont{
+  width: 20%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.srchIconCont:active{
+  opacity: 0.8;
+}
+
+.srchIcon{
+  width: 4.5vh;
+  height: 4.5vh;
+}
+
+.srchDD{
+  position: absolute;
+  width: 80%;
+  min-height:0vh ;
+  max-height: 40vh;
+  border: 1px solid black;
+  left: 0;
+  top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+}
+
+.ddList{
+
+}

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import classes from './App.module.css';
 import srchIcon from './search-icon.svg';
-import data from './data.json';
+import info from './data.json';
 
 export default function App({props}) {
 
-  const [srchInp , setSrchInp] = useState();
+  const [srchInp , setSrchInp] = useState('');
 
   const srchHandler = (e) => {
     setSrchInp(e.target.value);
@@ -19,21 +19,19 @@ export default function App({props}) {
       </button>
       <div className={classes.srchDD}>
           {
-            data.filter((val)=>{
-              if(srchInp === ""){
+            info.filter((val)=>{
+              if(srchInp === '')
                 return null;
-              }
-              else if(srchInp.toLowerCase() === "all"){
+              else if (srchInp.toLowerCase() === 'all')
                 return val;
-              }
-              else if(val.name.toLowerCase().includes(srchInp.toLowerCase())){
+              else if (val.name.toLowerCase().includes(srchInp.toLowerCase()))
                 return val;
-              }
-            }).map((val , key) => {
+            }).map((item) => {
               return (
-                <p className={classes.ddList}>{val.name}</p>
+                <a href={item.link} target='_blank'><p className={classes.ddList}>{item.name}</p></a>
               )
-            })}
+            })
+          }
       </div>
     </div>
   );
